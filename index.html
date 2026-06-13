@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar Explorer</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Musik -->
+    <audio id="bg-music" loop>
+        <source src="audio/space.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Background -->
+    <div class="stars"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+
+        <h2 class="logo">
+            🚀 Solar Explorer
+        </h2>
+
+        <div class="nav-right">
+
+            <button
+                id="music-btn"
+                onclick="toggleMusic()"
+                class="music-btn">
+
+                ▶ Musik
+
+            </button>
+
+        </div>
+
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+
+        <h1>
+            🌌 Jelajah Tata Surya
+        </h1>
+
+        <p>
+            Temukan keajaiban planet-planet
+            dan pelajari fakta menarik
+            tentang Tata Surya.
+        </p>
+
+        <a href="planet.html" class="btn">
+            🪐 Mulai Jelajah
+        </a>
+
+        <!-- Tata Surya -->
+
+        <div class="solar-system">
+
+            <div class="sun"></div>
+
+            <div class="mercury-orbit">
+                <div class="mercury"></div>
+            </div>
+
+            <div class="venus-orbit">
+                <div class="venus"></div>
+            </div>
+
+            <div class="earth-orbit">
+                <div class="earth"></div>
+            </div>
+
+            <div class="mars-orbit">
+                <div class="mars"></div>
+            </div>
+
+            <div class="jupiter-orbit">
+                <div class="jupiter"></div>
+            </div>
+
+            <div class="saturnus-orbit">
+                <div class="saturnus"></div>
+            </div>
+
+            <div class="uranus-orbit">
+                <div class="uranus"></div>
+            </div>
+
+            <div class="neptunus-orbit">
+                <div class="neptunus"></div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <script src="js/script.js"></script>
+<footer class="footer">
+    <p>© 2025 Solar Explorer | Dibuat oleh Daffina </p>
+</footer>
+</body>
+</html>

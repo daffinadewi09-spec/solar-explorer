@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eksplorasi Planet</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- AUDIO -->
+    <audio id="bg-music" loop>
+        <source src="audio/space.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- STARS -->
+    <div class="stars"></div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+
+        <h2 class="logo">
+            🚀 Solar Explorer
+        </h2>
+
+        <div class="nav-right">
+
+            <button
+                id="music-btn"
+                onclick="toggleMusic()"
+                class="music-btn">
+
+                ▶ Musik
+
+            </button>
+
+            <a href="index.html" class="btn-nav">
+                🏠 Beranda
+            </a>
+
+        </div>
+
+    </nav>
+
+    <!-- HEADER -->
+    <section class="planet-header">
+
+        <h1>
+            🪐 Jelajahi Planet Tata Surya
+        </h1>
+
+        <p>
+            Klik salah satu planet untuk melihat informasi,
+            gambar, dan fakta menariknya.
+        </p>
+
+    </section>
+
+    <!-- MENU PLANET -->
+    <div class="planet-menu">
+
+        <button onclick="showPlanet('merkurius')">
+            ☿ Merkurius
+        </button>
+
+        <button onclick="showPlanet('venus')">
+            ♀ Venus
+        </button>
+
+        <button onclick="showPlanet('bumi')">
+            🌍 Bumi
+        </button>
+
+        <button onclick="showPlanet('mars')">
+            ♂ Mars
+        </button>
+
+        <button onclick="showPlanet('jupiter')">
+            ♃ Jupiter
+        </button>
+
+        <button onclick="showPlanet('saturnus')">
+            🪐 Saturnus
+        </button>
+
+        <button onclick="showPlanet('uranus')">
+            ⛢ Uranus
+        </button>
+
+        <button onclick="showPlanet('neptunus')">
+            ♆ Neptunus
+        </button>
+
+    </div>
+
+    <!-- KARTU PLANET -->
+    <section class="planet-card">
+
+        <div class="planet-image">
+
+            <img
+                id="planet-img"
+                src="images/bumi.jpg"
+                alt="Planet">
+
+        </div>
+
+        <div class="planet-info">
+
+            <h1 id="planet-name">
+                Bumi
+            </h1>
+
+            <p id="planet-description">
+
+                Bumi adalah planet ketiga dari Matahari
+                dan satu-satunya planet yang diketahui
+                mendukung kehidupan.
+
+            </p>
+
+            <ul id="planet-data">
+
+                <li>Diameter: 12.742 km</li>
+                <li>Jumlah Satelit: 1 (Bulan)</li>
+                <li>Jarak ke Matahari: 149,6 juta km</li>
+
+            </ul>
+
+        </div>
+
+    </section>
+
+    <!-- FAKTA MENARIK -->
+    <section class="fact-box">
+
+        <h2>
+            ✨ Fakta Menarik
+        </h2>
+
+        <p id="planet-fact">
+
+            Bumi adalah satu-satunya planet yang diketahui
+            memiliki kehidupan.
+
+        </p>
+
+    </section>
+
+    <!-- TOMBOL KE GALERI -->
+    <section class="next-page">
+
+    <a href="tentang.html" class="btn">
+        👨‍🚀 Tentang Proyek
+    </a>
+    <script src="js/script.js"></script>
+    <footer class="footer">
+    <p>© 2025 Solar Explorer | Dibuat oleh Daffina </p>
+</footer>
+</body>
+</html>
+
+</section>
+</body>
+</html>
