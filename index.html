@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar Explorer</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<audio id="clickSound">
+    <source src="audio/click.mp3" type="audio/mpeg">
+</audio>
+<body>
+
+<audio id="bg-music" loop>
+    <source src="audio/space.mp3" type="audio/mpeg">
+</audio>
+
+<div class="stars"></div>
+<div class="meteor"></div>
+
+<nav class="navbar">
+
+    <h2 class="logo">🚀 Solar Explorer</h2>
+
+    <div class="nav-right">
+
+        <button
+    id="music-btn"
+    class="music-btn"
+    onclick="toggleMusic()">
+
+    ▶ Musik
+</button>
+</button>
+
+    </div>
+
+</nav>
+
+<section class="hero">
+
+    <h1>🌌 Jelajah Tata Surya</h1>
+
+    <p>
+        Temukan keajaiban planet-planet
+        dan pelajari fakta menarik
+        tentang Tata Surya.
+    </p>
+
+    <a href="planet.html" class="btn">
+        🪐 Mulai Jelajah
+    </a>
+
+    <div class="solar-system">
+
+        <div class="sun"></div>
+
+        <div class="mercury-orbit">
+            <div class="mercury"></div>
+        </div>
+
+        <div class="venus-orbit">
+            <div class="venus"></div>
+        </div>
+
+        <div class="earth-orbit">
+            <div class="earth"></div>
+        </div>
+
+        <div class="mars-orbit">
+            <div class="mars"></div>
+        </div>
+
+        <div class="jupiter-orbit">
+            <div class="jupiter"></div>
+        </div>
+
+        <div class="saturnus-orbit">
+            <div class="saturnus"></div>
+        </div>
+
+        <div class="uranus-orbit">
+            <div class="uranus"></div>
+        </div>
+
+        <div class="neptunus-orbit">
+            <div class="neptunus"></div>
+        </div>
+
+    </div>
+
+</section>
+
+<footer class="footer">
+
+    <p>
+        © 2025 Solar Explorer | Dibuat oleh Daffina
+    </p>
+
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+<div id="loader">
+
+    <div class="loader-content">
+
+        <div class="loader-planet"></div>
+
+        <h2>Loading Solar Explorer...</h2>
+
+    </div>
+
+</div>
+</html>

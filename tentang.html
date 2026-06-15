@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar Explorer - Tentang</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<script src="js/script.js"></script>
+<body>
+
+    <!-- LOADING SCREEN -->
+    <div id="loader">
+
+        <div class="loader-content">
+
+            <div class="loader-planet"></div>
+
+            <h2>Loading Solar Explorer...</h2>
+
+        </div>
+
+    </div>
+
+    <!-- AUDIO CLICK -->
+    <audio id="clickSound">
+        <source src="audio/click.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- BACKGROUND -->
+    <div class="stars"></div>
+    <div class="meteor"></div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+
+    <h2 class="logo">🚀 Solar Explorer</h2>
+
+    <div class="nav-right">
+
+        <a href="index.html" class="btn-nav">
+            🏠 Beranda
+        </a>
+
+        <a href="planet.html" class="btn-nav">
+            🪐 Planet
+        </a>
+
+        <a href="tentang.html" class="btn-nav">
+            📖 Tentang
+        </a>
+
+        <button
+            id="music-btn"
+            class="music-btn"
+            onclick="toggleMusic()">
+
+            ▶ Musik
+
+        </button>
+
+    </div>
+
+</nav>
+
+    <!-- HEADER -->
+    <section class="planet-header">
+
+        <h1>📖 Tentang Proyek</h1>
+
+        <p>
+            Solar Explorer adalah website edukasi interaktif yang membantu pengguna mengenal planet-planet dalam Tata Surya dengan tampilan modern dan menarik.
+        </p>
+
+    </section>
+
+    <!-- TUJUAN -->
+    <section class="fact-box">
+
+        <h2>🎯 Tujuan Website</h2>
+
+        <p>
+            Website ini dibuat untuk membantu pengguna mempelajari Tata Surya secara lebih menarik melalui animasi, gambar planet, informasi edukatif, dan interaksi menggunakan JavaScript.
+        </p>
+
+    </section>
+
+    <!-- TEKNOLOGI -->
+    <section class="fact-box">
+
+        <h2>🛠 Teknologi yang Digunakan</h2>
+
+        <p>
+            HTML5<br>
+            CSS3<br>
+            JavaScript
+        </p>
+
+    </section>
+
+    <!-- PEMBUAT -->
+    <section class="fact-box">
+
+    <div class="profile-container">
+
+        <img
+            src="images/profile.jpg"
+            alt="Foto Pembuat"
+            class="profile-photo"
+        >
+
+        <h2>👨‍💻 Profil Pembuat</h2>
+
+        <p>
+            <strong>Daffina Hartantya Kirana Dewi</strong><br>
+            NIM : 141251059<br>
+            Tahun : 2026
+        </p>
+
+        <br>
+
+        <p>
+            Mahasiswa yang mengembangkan website Solar Explorer sebagai proyek UAS Pemrogaman Web yang berkolaborasi dengan Multimedia dengan tujuan 
+            menghadirkan media pembelajaran Tata Surya yang interaktif dan mudah dipahami.
+        </p>
+
+    </div>
+
+</section>
+
+    <!-- TERIMA KASIH -->
+    <section class="fact-box">
+
+        <h2>🌌 Terima Kasih</h2>
+
+        <p>
+            Terima kasih telah mengunjungi Solar Explorer.
+            Semoga website ini dapat menambah wawasan mengenai Tata Surya dan memberikan pengalaman belajar yang menyenangkan.
+        </p>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <p>
+            © 2026 Solar Explorer | Dibuat oleh Daffina Hartantya Kirana Dewi
+        </p>
+
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+<audio
+    id="bg-music"
+    loop>
+
+    <source
+        src="audio/space.mp3"
+        type="audio/mpeg">
+
+</audio>
+</html>
