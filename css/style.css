@@ -256,6 +256,7 @@ body{
 
     animation:
     glowTitle 2s ease-in-out infinite alternate;
+    floatTitle 4s ease-in-out infinite;
 }
 
 @keyframes glowTitle{
@@ -266,6 +267,20 @@ body{
         0 0 10px #38bdf8,
         0 0 20px #38bdf8;
     }
+    @keyframes floatTitle{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-12px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+}
 
     to{
 
