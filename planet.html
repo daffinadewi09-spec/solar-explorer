@@ -1,137 +1,166 @@
 <!DOCTYPE html>
-
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Planet Tata Surya</title>
 
-<link rel="stylesheet" href="css/style.css">
-
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<audio id="clickSound">
-    <source src="audio/click.mp3" type="audio/mpeg">
-</audio>
+
 <body>
 
-<div class="stars"></div>
+    <audio id="clickSound">
+        <source src="audio/click.mp3" type="audio/mpeg">
+    </audio>
 
-<nav class="navbar">
+    <audio id="bg-music" loop>
+        <source src="audio/space.mp3" type="audio/mpeg">
+    </audio>
 
-    <h2 class="logo">🚀 Solar Explorer</h2>
+    <div class="stars"></div>
 
-    <div class="nav-right">
+    <nav class="navbar">
 
-        <a href="index.html" class="btn-nav">
-            🏠 Beranda
-        </a>
+        <h2 class="logo">🚀 Solar Explorer</h2>
 
-        <a href="planet.html" class="btn-nav">
-            🪐 Planet
-        </a>
+        <div class="nav-right">
 
-        <a href="tentang.html" class="btn-nav">
-            📖 Tentang
-        </a>
+            <a href="index.html" class="btn-nav">
+                🏠 Beranda
+            </a>
 
-        <button
-            id="music-btn"
-            class="music-btn"
-            onclick="toggleMusic()">
+            <a href="planet.html" class="btn-nav">
+                🪐 Planet
+            </a>
 
-            ▶ Musik
-        </button>
+            <a href="tentang.html" class="btn-nav">
+                📖 Tentang
+            </a>
+
+            <button
+                id="music-btn"
+                class="music-btn"
+                onclick="toggleMusic()">
+
+                ▶ Musik
+
+            </button>
+
+        </div>
+
+    </nav>
+
+    <section class="planet-page">
+
+        <h1>Pilih Planet</h1>
+
+        <div class="planet-buttons">
+
+            <button onclick="showPlanet('merkurius', this)">
+                ☿ Merkurius
+            </button>
+
+            <button onclick="showPlanet('venus', this)">
+                ♀ Venus
+            </button>
+
+            <button
+                class="active-planet"
+                onclick="showPlanet('bumi', this)">
+                🌍 Bumi
+            </button>
+
+            <button onclick="showPlanet('mars', this)">
+                ♂ Mars
+            </button>
+
+            <button onclick="showPlanet('jupiter', this)">
+                ♃ Jupiter
+            </button>
+
+            <button onclick="showPlanet('saturnus', this)">
+                🪐 Saturnus
+            </button>
+
+            <button onclick="showPlanet('uranus', this)">
+                ⛢ Uranus
+            </button>
+
+            <button onclick="showPlanet('neptunus', this)">
+                ♆ Neptunus
+            </button>
+
+        </div>
+
+        <div class="planet-card">
+
+            <img
+                id="planet-img"
+                src="images/bumi.jpg"
+                alt="Planet">
+
+            <h2 id="planet-name">
+                Bumi
+            </h2>
+
+            <p id="planet-description">
+                Bumi adalah satu-satunya planet yang diketahui mendukung kehidupan.
+            </p>
+
+            <ul id="planet-data">
+                <li>Diameter: 12.742 km</li>
+                <li>Jumlah Satelit: 1</li>
+                <li>Jarak ke Matahari: 149,6 juta km</li>
+            </ul>
+
+            <div class="fact-box">
+
+                <h3>Fakta Menarik</h3>
+
+                <p id="planet-fact">
+                    71% permukaan Bumi tertutup air.
+                </p>
+
+            </div>
+
+            <!-- VIDEO -->
+
+            <div class="video-section">
+
+                <h2>🎥 Video Edukasi Tata Surya</h2>
+
+                <p>
+                    Pelajari lebih lanjut mengenai Tata Surya melalui video berikut.
+                </p>
+
+                <iframe
+                    src="https://www.youtube.com/embed/2EgP_zSOKN4"
+                    title="Video Tata Surya"
+                    allowfullscreen>
+                </iframe>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <div id="loader">
+
+        <div class="loader-content">
+
+            <div class="loader-planet"></div>
+
+            <h2>Loading Solar Explorer...</h2>
+
+        </div>
 
     </div>
 
-</nav>
-
-</nav>
-
-<section class="planet-page">
-
-<h1>Pilih Planet</h1>
-
-<div class="planet-buttons">
-
-    <button onclick="showPlanet('merkurius', this)">☿ Merkurius</button>
-
-<button onclick="showPlanet('venus', this)">♀ Venus</button>
-
-<button class="active-planet"
-onclick="showPlanet('bumi', this)">
-🌍 Bumi
-</button>
-
-<button onclick="showPlanet('mars', this)">♂ Mars</button>
-
-<button onclick="showPlanet('jupiter', this)">♃ Jupiter</button>
-
-<button onclick="showPlanet('saturnus', this)">🪐 Saturnus</button>
-
-<button onclick="showPlanet('uranus', this)">⛢ Uranus</button>
-
-<button onclick="showPlanet('neptunus', this)">♆ Neptunus</button>
-</div>
-
-<div class="planet-card">
-
-    <img id="planet-img" src="images/bumi.jpg" alt="Planet">
-
-    <h2 id="planet-name">Bumi</h2>
-
-    <p id="planet-description">
-        Bumi adalah satu-satunya planet yang diketahui mendukung kehidupan.
-    </p>
-
-    <ul id="planet-data">
-        <li>Diameter: 12.742 km</li>
-        <li>Jumlah Satelit: 1</li>
-        <li>Jarak ke Matahari: 149,6 juta km</li>
-    </ul>
-
-    <div class="fact-box">
-
-        <h3>Fakta Menarik</h3>
-
-        <p id="planet-fact">
-            71% permukaan Bumi tertutup air.
-        </p>
-
-    </div>
-<!-- VIDEO -->
-
-<div class="video-section">
-
-    <h2>🎥 Video Edukasi Tata Surya</h2>
-
-    <iframe
-        src="https://www.youtube.com/embed/2EgP_zSOKN4"
-        title="Video Tata Surya"
-        allowfullscreen>
-    </iframe>
-</div>
-</section>
-
-<script src="js/script.js"></script>
+    <script src="js/script.js"></script>
 
 </body>
-<body>
 
-<audio id="bg-music" loop>
-    <source src="audio/space.mp3" type="audio/mpeg">
-</audio>
-
-<div class="stars"></div>
-<div id="loader">
-
-    <div class="loader-content">
-
-        <div class="loader-planet"></div>
-
-        <h2>Loading Solar Explorer...</h2>
-
-    </div>
-
-</div>
 </html>
