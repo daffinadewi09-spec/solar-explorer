@@ -1151,19 +1151,21 @@ height:50px;
     0 0 15px #38bdf8,
     0 0 35px #38bdf8;
 }
-/* VIDEO SECTION */
-
 .video-section{
 
     text-align:center;
 
-    margin-top:50px;
+    max-width:1000px;
 
-    padding-top:20px;
+    margin:60px auto;
+
+    padding:30px;
 
 }
 
 .video-section h2{
+
+    font-size:2rem;
 
     margin-bottom:15px;
 
@@ -1179,11 +1181,11 @@ height:50px;
 
 .video-section iframe{
 
-    width:90%;
+    width:100%;
 
-    max-width:800px;
+    max-width:900px;
 
-    height:450px;
+    height:500px;
 
     border:none;
 
