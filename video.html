@@ -1,14 +1,118 @@
-<h1>🎥 Video Eksplorasi Tata Surya</h1>
+<!DOCTYPE html>
+<html lang="id">
 
-<div class="video-container">
+<head>
 
-    <iframe
-        src="https://www.youtube.com/embed/2EgP_zSOKN4"
-        allowfullscreen>
-    </iframe>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-</div>
+    <title>Video Edukasi | Solar Explorer</title>
 
-<p>
-    Video penjelasan mengenai tata surya dan planet-planet.
-</p>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <audio id="clickSound">
+        <source src="audio/click.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="bg-music" loop>
+        <source src="audio/space.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="stars"></div>
+    <div class="meteor"></div>
+
+    <nav class="navbar">
+
+        <h2 class="logo">🚀 Solar Explorer</h2>
+
+        <div class="nav-right">
+
+            <a href="index.html" class="btn-nav">
+                🏠 Beranda
+            </a>
+
+            <a href="planet.html" class="btn-nav">
+                🪐 Planet
+            </a>
+
+            <a href="video.html" class="btn-nav active-nav">
+                🎥 Video
+            </a>
+
+            <a href="tentang.html" class="btn-nav">
+                📖 Tentang
+            </a>
+
+            <button
+                id="music-btn"
+                class="music-btn"
+                onclick="toggleMusic()">
+
+                ▶ Musik
+
+            </button>
+
+        </div>
+
+    </nav>
+
+    <section class="planet-page">
+
+        <h1>🎥 Video Edukasi Tata Surya</h1>
+
+        <p style="margin-bottom:30px; color:#cbd5e1;">
+            Pelajari Tata Surya lebih dalam melalui video berikut.
+        </p>
+
+        <div class="video-section">
+
+            <iframe
+                src="https://www.youtube.com/embed/2EgP_zSOKN4"
+                title="Video Tata Surya"
+                allowfullscreen>
+            </iframe>
+
+        </div>
+
+        <div class="fact-box">
+
+            <h2>🌌 Fakta Menarik</h2>
+
+            <p>
+                Tata Surya terbentuk sekitar 4,6 miliar tahun yang lalu
+                dari awan gas dan debu raksasa yang runtuh karena gravitasi.
+            </p>
+
+        </div>
+
+    </section>
+
+    <footer class="footer">
+
+        <p>
+            © 2026 Solar Explorer | Dibuat oleh Daffina Hartantya Kirana Dewi
+        </p>
+
+    </footer>
+
+    <div id="loader">
+
+        <div class="loader-content">
+
+            <div class="loader-planet"></div>
+
+            <h2>Loading Solar Explorer...</h2>
+
+        </div>
+
+    </div>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
