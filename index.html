@@ -24,22 +24,38 @@
 
     <nav class="navbar">
 
-        <h2 class="logo">🚀 Solar Explorer</h2>
+    <h2 class="logo">🚀 Solar Explorer</h2>
 
-        <div class="nav-right">
+    <div class="nav-right">
 
-            <button
-                id="music-btn"
-                class="music-btn"
-                onclick="toggleMusic()">
+        <a href="index.html" class="btn-nav">
+            🏠 Beranda
+        </a>
 
-                ▶ Musik
+        <a href="planet.html" class="btn-nav">
+            🪐 Planet
+        </a>
 
-            </button>
+        <a href="video.html" class="btn-nav">
+            🎥 Video
+        </a>
 
-        </div>
+        <a href="tentang.html" class="btn-nav">
+            📖 Tentang
+        </a>
 
-    </nav>
+        <button
+            id="music-btn"
+            class="music-btn"
+            onclick="toggleMusic()">
+
+            ▶ Musik
+
+        </button>
+
+    </div>
+
+</nav>
 
     <section class="hero">
 
@@ -51,8 +67,10 @@
             tentang Tata Surya.
         </p>
 
-        <a href="planet.html" class="btn">
-            🪐 Mulai Jelajah
+        <a 
+            href="planet.html" class="btn" onclick="playClick()">
+            🚀 Mulai Jelajah
+</a>
         </a>
 
         <div class="solar-system">
@@ -60,35 +78,35 @@
             <div class="sun"></div>
 
             <div class="mercury-orbit">
-                <div class="mercury"></div>
+                <div class="mercury" title="Merkurius"></div>
             </div>
 
             <div class="venus-orbit">
-                <div class="venus"></div>
+                <div class="venus" title="Venus"></div>
             </div>
 
             <div class="earth-orbit">
-                <div class="earth"></div>
+               <div class="earth" title="Bumi"></div>
             </div>
 
             <div class="mars-orbit">
-                <div class="mars"></div>
+               <div class="mars" title="Mars"></div>
             </div>
 
             <div class="jupiter-orbit">
-                <div class="jupiter"></div>
+              <div class="jupiter" title="Jupiter"></div>
             </div>
 
             <div class="saturnus-orbit">
-                <div class="saturnus"></div>
+                <div class="saturnus" title="Saturnus"></div>
             </div>
 
             <div class="uranus-orbit">
-                <div class="uranus"></div>
+                <div class="uranus" title="Uranus"></div>
             </div>
 
             <div class="neptunus-orbit">
-                <div class="neptunus"></div>
+               <div class="neptunus" title="Neptunus"></div>
             </div>
 
         </div>
@@ -96,6 +114,17 @@
     </section>
 
     <footer class="footer">
+        <section class="fact-box" style="max-width:900px; margin:50px auto;">
+
+    <h2>🌌 Tahukah Kamu?</h2>
+
+    <p>
+        Tata Surya berusia sekitar 4,6 miliar tahun dan terdiri dari
+        Matahari, delapan planet, satelit alami, asteroid, komet,
+        serta berbagai benda langit lainnya.
+    </p>
+
+</section>
 
         <p>
             © 2026 Solar Explorer | Dibuat oleh Daffina
