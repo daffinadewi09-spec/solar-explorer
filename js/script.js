@@ -265,3 +265,39 @@ function goPlanet(){
     window.location.href = "planet.html";
 
 }
+function animateCounter(id, target){
+
+    let count = 0;
+
+    const element =
+    document.getElementById(id);
+
+    if(!element) return;
+
+    const interval = setInterval(() => {
+
+        count++;
+
+        element.innerHTML = count;
+
+        if(count >= target){
+
+            clearInterval(interval);
+
+        }
+
+    },20);
+
+}
+
+window.addEventListener("load", () => {
+
+    animateCounter("sun-count",1);
+
+    animateCounter("planet-count",8);
+
+    animateCounter("moon-count",290);
+
+    animateCounter("asteroid-count",500);
+
+});
