@@ -2,14 +2,19 @@
 <html lang="id">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Planet Tata Surya</title>
+
+    <title>Planet Tata Surya | Solar Explorer</title>
 
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
+
+    <!-- AUDIO -->
 
     <audio id="clickSound">
         <source src="audio/click.mp3" type="audio/mpeg">
@@ -19,7 +24,11 @@
         <source src="audio/space.mp3" type="audio/mpeg">
     </audio>
 
+    <!-- BACKGROUND -->
+
     <div class="stars"></div>
+
+    <!-- NAVBAR -->
 
     <nav class="navbar">
 
@@ -28,20 +37,20 @@
         <div class="nav-right">
 
             <a href="index.html" class="btn-nav">
-    🏠 Beranda
-</a>
+                🏠 Beranda
+            </a>
 
-<a href="planet.html" class="btn-nav active-nav">
-    🪐 Planet
-</a>
+            <a href="planet.html" class="btn-nav active-nav">
+                🪐 Planet
+            </a>
 
-<a href="video.html" class="btn-nav">
-    🎥 Video
-</a>
+            <a href="video.html" class="btn-nav">
+                🎥 Video
+            </a>
 
-<a href="tentang.html" class="btn-nav">
-    📖 Tentang
-</a>
+            <a href="tentang.html" class="btn-nav">
+                📖 Tentang
+            </a>
 
             <button
                 id="music-btn"
@@ -55,6 +64,8 @@
         </div>
 
     </nav>
+
+    <!-- KONTEN -->
 
     <section class="planet-page">
 
@@ -98,34 +109,48 @@
 
         </div>
 
+        <!-- CARD PLANET -->
+
         <div class="planet-card">
 
-            <img
-                id="planet-img"
-                src="images/bumi.jpg"
-                alt="Planet">
+            <div class="planet-image">
 
-            <h2 id="planet-name">
-                Bumi
-            </h2>
+                <img
+                    id="planet-img"
+                    src="images/bumi.jpg"
+                    alt="Planet">
 
-            <p id="planet-description">
-                Bumi adalah satu-satunya planet yang diketahui mendukung kehidupan.
-            </p>
+            </div>
 
-            <ul id="planet-data">
-                <li>Diameter: 12.742 km</li>
-                <li>Jumlah Satelit: 1</li>
-                <li>Jarak ke Matahari: 149,6 juta km</li>
-            </ul>
+            <div class="planet-info">
 
-            <div class="fact-box">
+                <h2 id="planet-name">
+                    Bumi
+                </h2>
 
-                <h3>Fakta Menarik</h3>
-
-                <p id="planet-fact">
-                    71% permukaan Bumi tertutup air.
+                <p id="planet-description">
+                    Bumi adalah satu-satunya planet yang diketahui mendukung kehidupan.
                 </p>
+
+                <ul id="planet-data">
+
+                    <li>Diameter: 12.742 km</li>
+
+                    <li>Jumlah Satelit: 1</li>
+
+                    <li>Jarak ke Matahari: 149,6 juta km</li>
+
+                </ul>
+
+                <div class="fact-box">
+
+                    <h3>Fakta Menarik</h3>
+
+                    <p id="planet-fact">
+                        71% permukaan Bumi tertutup air.
+                    </p>
+
+                </div>
 
             </div>
 
@@ -150,6 +175,18 @@
         </section>
 
     </section>
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <p>
+            © 2026 Solar Explorer | Dibuat oleh Daffina Hartantya Kirana Dewi
+        </p>
+
+    </footer>
+
+    <!-- LOADER -->
 
     <div id="loader">
 
