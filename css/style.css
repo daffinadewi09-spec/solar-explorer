@@ -957,3 +957,61 @@ body{
         align-items:center;
     }
 }
+.mission-card{
+
+    max-width:900px;
+
+    margin:40px auto;
+
+    padding:30px;
+
+    border-radius:25px;
+
+    background:
+    rgba(255,255,255,.06);
+
+    border:
+    1px solid rgba(255,255,255,.1);
+
+    backdrop-filter:blur(10px);
+
+    box-shadow:
+    0 0 20px rgba(56,189,248,.25);
+
+    transition:.3s;
+}
+
+.mission-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+    0 0 30px rgba(56,189,248,.5);
+}
+
+.mission-card img{
+
+    width:100%;
+
+    max-width:500px;
+
+    border-radius:20px;
+
+    margin-bottom:20px;
+}
+
+.mission-card h2{
+
+    color:#38bdf8;
+
+    margin-bottom:15px;
+}
+
+.mission-card ul{
+
+    margin-top:15px;
+
+    margin-left:20px;
+
+    line-height:2;
+}
