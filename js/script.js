@@ -258,3 +258,10 @@ window.addEventListener("load", () => {
     }, 1500);
 
 });
+function goPlanet(){
+
+    playClick();
+
+    window.location.href = "planet.html";
+
+}
