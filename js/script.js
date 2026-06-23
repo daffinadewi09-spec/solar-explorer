@@ -1,44 +1,46 @@
+// =========================
+// MUSIC
+// =========================
+
 function toggleMusic() {
 
-    const music = document.getElementById("bg-music");
-    const btn = document.getElementById("music-btn");
+    const music =
+    document.getElementById("bg-music");
 
-    if (!music) {
-        alert("Audio tidak ditemukan!");
-        return;
-    }
+    const btn =
+    document.getElementById("music-btn");
+
+    if (!music) return;
 
     if (music.paused) {
 
-        music.play()
-        .then(() => {
+        music.play();
 
-            if (btn) {
-                btn.innerHTML = "⏸ Pause";
-            }
+        if (btn) {
 
-        })
-        .catch((error) => {
+            btn.innerHTML =
+            "⏸ Pause";
 
-            console.error("Gagal memutar audio:", error);
-
-            alert(
-                "Audio gagal diputar. Cek file audio/space.mp3"
-            );
-
-        });
+        }
 
     } else {
 
         music.pause();
 
         if (btn) {
-            btn.innerHTML = "▶ Musik";
+
+            btn.innerHTML =
+            "▶ Musik";
+
         }
 
     }
 
 }
+
+// =========================
+// CLICK SOUND
+// =========================
 
 function playClick() {
 
@@ -48,201 +50,233 @@ function playClick() {
     if (!click) return;
 
     click.currentTime = 0;
+
     click.play();
 
 }
 
+// =========================
+// GO TO PLANET PAGE
+// =========================
+
+function goPlanet() {
+
+    playClick();
+
+    window.location.href =
+    "planet.html";
+
+}
+
+// =========================
+// PLANET DATA
+// =========================
+
 function showPlanet(planet, button) {
+
+    const img =
+    document.getElementById("planet-img");
+
+    const name =
+    document.getElementById("planet-name");
+
+    const desc =
+    document.getElementById("planet-description");
+
+    const data =
+    document.getElementById("planet-data");
+
+    const fact =
+    document.getElementById("planet-fact");
+
+    if (!img) return;
 
     document
     .querySelectorAll(".planet-buttons button")
     .forEach(btn => {
 
-        btn.classList.remove("active-planet");
+        btn.classList.remove(
+            "active-planet"
+        );
 
     });
 
     if (button) {
-        button.classList.add("active-planet");
-    }
 
-    const img = document.getElementById("planet-img");
-    const name = document.getElementById("planet-name");
-    const description = document.getElementById("planet-description");
-    const data = document.getElementById("planet-data");
-    const fact = document.getElementById("planet-fact");
-
-    if (!img) return;
-
-    // MERKURIUS
-    if (planet === "merkurius") {
-
-        img.src = "images/merkurius.jpg";
-
-        name.innerHTML = "Merkurius";
-
-        description.innerHTML =
-        "Merkurius adalah planet terdekat dengan Matahari dan merupakan planet terkecil di Tata Surya.";
-
-        data.innerHTML = `
-            <li>Diameter: 4.879 km</li>
-            <li>Jumlah Satelit: 0</li>
-            <li>Jarak ke Matahari: 57,9 juta km</li>
-        `;
-
-        fact.innerHTML =
-        "Satu tahun di Merkurius hanya berlangsung sekitar 88 hari Bumi.";
+        button.classList.add(
+            "active-planet"
+        );
 
     }
 
-    // VENUS
-    else if (planet === "venus") {
+    const planets = {
 
-        img.src = "images/venus.jpg";
+        merkurius: {
 
-        name.innerHTML = "Venus";
+            img:"images/merkurius.jpg",
 
-        description.innerHTML =
-        "Venus adalah planet kedua dari Matahari dan planet terpanas di Tata Surya.";
+            name:"Merkurius",
 
-        data.innerHTML = `
-            <li>Diameter: 12.104 km</li>
-            <li>Jumlah Satelit: 0</li>
-            <li>Jarak ke Matahari: 108,2 juta km</li>
-        `;
+            desc:"Merkurius adalah planet terdekat dengan Matahari dan merupakan planet terkecil di Tata Surya.",
 
-        fact.innerHTML =
-        "Venus berputar berlawanan arah dibanding sebagian besar planet lainnya.";
+            data:`
+                <li>Diameter: 4.879 km</li>
+                <li>Satelit: 0</li>
+                <li>Jarak: 57,9 juta km</li>
+            `,
 
-    }
+            fact:"Satu tahun di Merkurius hanya 88 hari Bumi."
 
-    // BUMI
-    else if (planet === "bumi") {
+        },
 
-        img.src = "images/bumi.jpg";
+        venus: {
 
-        name.innerHTML = "Bumi";
+            img:"images/venus.jpg",
 
-        description.innerHTML =
-        "Bumi adalah satu-satunya planet yang diketahui mendukung kehidupan.";
+            name:"Venus",
 
-        data.innerHTML = `
-            <li>Diameter: 12.742 km</li>
-            <li>Jumlah Satelit: 1 (Bulan)</li>
-            <li>Jarak ke Matahari: 149,6 juta km</li>
-        `;
+            desc:"Venus adalah planet terpanas di Tata Surya.",
 
-        fact.innerHTML =
-        "71% permukaan Bumi tertutup oleh air.";
+            data:`
+                <li>Diameter: 12.104 km</li>
+                <li>Satelit: 0</li>
+                <li>Jarak: 108,2 juta km</li>
+            `,
 
-    }
+            fact:"Venus berputar berlawanan arah dengan sebagian besar planet."
 
-    // MARS
-    else if (planet === "mars") {
+        },
 
-        img.src = "images/mars.jpg";
+        bumi: {
 
-        name.innerHTML = "Mars";
+            img:"images/bumi.jpg",
 
-        description.innerHTML =
-        "Mars dikenal sebagai Planet Merah karena permukaannya kaya akan oksida besi.";
+            name:"Bumi",
 
-        data.innerHTML = `
-            <li>Diameter: 6.779 km</li>
-            <li>Jumlah Satelit: 2</li>
-            <li>Jarak ke Matahari: 227,9 juta km</li>
-        `;
+            desc:"Bumi adalah satu-satunya planet yang diketahui mendukung kehidupan.",
 
-        fact.innerHTML =
-        "Mars memiliki gunung tertinggi di Tata Surya yaitu Olympus Mons.";
+            data:`
+                <li>Diameter: 12.742 km</li>
+                <li>Satelit: 1</li>
+                <li>Jarak: 149,6 juta km</li>
+            `,
 
-    }
+            fact:"71% permukaan Bumi tertutup air."
 
-    // JUPITER
-    else if (planet === "jupiter") {
+        },
 
-        img.src = "images/jupiter.jpg";
+        mars: {
 
-        name.innerHTML = "Jupiter";
+            img:"images/mars.jpg",
 
-        description.innerHTML =
-        "Jupiter adalah planet terbesar di Tata Surya.";
+            name:"Mars",
 
-        data.innerHTML = `
-            <li>Diameter: 139.820 km</li>
-            <li>Jumlah Satelit: 95+</li>
-            <li>Jarak ke Matahari: 778,5 juta km</li>
-        `;
+            desc:"Mars dikenal sebagai Planet Merah.",
 
-        fact.innerHTML =
-        "Lebih dari 1.300 planet Bumi dapat dimasukkan ke dalam Jupiter.";
+            data:`
+                <li>Diameter: 6.779 km</li>
+                <li>Satelit: 2</li>
+                <li>Jarak: 227,9 juta km</li>
+            `,
 
-    }
+            fact:"Olympus Mons adalah gunung tertinggi di Tata Surya."
 
-    // SATURNUS
-    else if (planet === "saturnus") {
+        },
 
-        img.src = "images/saturnus.jpg";
+        jupiter: {
 
-        name.innerHTML = "Saturnus";
+            img:"images/jupiter.jpg",
 
-        description.innerHTML =
-        "Saturnus terkenal karena sistem cincinnya yang sangat indah.";
+            name:"Jupiter",
 
-        data.innerHTML = `
-            <li>Diameter: 116.460 km</li>
-            <li>Jumlah Satelit: 146+</li>
-            <li>Jarak ke Matahari: 1,43 miliar km</li>
-        `;
+            desc:"Jupiter adalah planet terbesar di Tata Surya.",
 
-        fact.innerHTML =
-        "Cincin Saturnus tersusun dari miliaran partikel es dan batu.";
+            data:`
+                <li>Diameter: 139.820 km</li>
+                <li>Satelit: 95+</li>
+                <li>Jarak: 778,5 juta km</li>
+            `,
 
-    }
+            fact:"Lebih dari 1.300 Bumi bisa masuk ke Jupiter."
 
-    // URANUS
-    else if (planet === "uranus") {
+        },
 
-        img.src = "images/uranus.jpg";
+        saturnus: {
 
-        name.innerHTML = "Uranus";
+            img:"images/saturnus.jpg",
 
-        description.innerHTML =
-        "Uranus adalah planet es raksasa yang memiliki kemiringan sumbu unik.";
+            name:"Saturnus",
 
-        data.innerHTML = `
-            <li>Diameter: 50.724 km</li>
-            <li>Jumlah Satelit: 27</li>
-            <li>Jarak ke Matahari: 2,87 miliar km</li>
-        `;
+            desc:"Saturnus terkenal dengan cincin indahnya.",
 
-        fact.innerHTML =
-        "Uranus tampak seperti berguling saat mengelilingi Matahari.";
+            data:`
+                <li>Diameter: 116.460 km</li>
+                <li>Satelit: 146+</li>
+                <li>Jarak: 1,43 miliar km</li>
+            `,
 
-    }
+            fact:"Cincin Saturnus tersusun dari es dan batu."
 
-    // NEPTUNUS
-    else if (planet === "neptunus") {
+        },
 
-        img.src = "images/neptunus.jpg";
+        uranus: {
 
-        name.innerHTML = "Neptunus";
+            img:"images/uranus.jpg",
 
-        description.innerHTML =
-        "Neptunus adalah planet terjauh dari Matahari.";
+            name:"Uranus",
 
-        data.innerHTML = `
-            <li>Diameter: 49.244 km</li>
-            <li>Jumlah Satelit: 14</li>
-            <li>Jarak ke Matahari: 4,50 miliar km</li>
-        `;
+            desc:"Uranus adalah planet es raksasa.",
 
-        fact.innerHTML =
-        "Neptunus memiliki angin tercepat di Tata Surya, mencapai lebih dari 2.000 km/jam.";
+            data:`
+                <li>Diameter: 50.724 km</li>
+                <li>Satelit: 27</li>
+                <li>Jarak: 2,87 miliar km</li>
+            `,
 
-    }
+            fact:"Uranus tampak berguling saat mengelilingi Matahari."
+
+        },
+
+        neptunus: {
+
+            img:"images/neptunus.jpg",
+
+            name:"Neptunus",
+
+            desc:"Neptunus adalah planet terjauh dari Matahari.",
+
+            data:`
+                <li>Diameter: 49.244 km</li>
+                <li>Satelit: 14</li>
+                <li>Jarak: 4,5 miliar km</li>
+            `,
+
+            fact:"Kecepatan anginnya bisa mencapai 2.000 km/jam."
+
+        }
+
+    };
+
+    const p =
+    planets[planet];
+
+    if (!p) return;
+
+    img.src = p.img;
+
+    name.innerHTML = p.name;
+
+    desc.innerHTML = p.desc;
+
+    data.innerHTML = p.data;
+
+    fact.innerHTML = p.fact;
 
 }
+
+// =========================
+// LOADER
+// =========================
 
 window.addEventListener("load", () => {
 
@@ -253,51 +287,68 @@ window.addEventListener("load", () => {
 
     setTimeout(() => {
 
-        loader.classList.add("loader-hide");
+        loader.classList.add(
+            "loader-hide"
+        );
 
-    }, 1500);
+    }, 1200);
 
 });
-function goPlanet(){
 
-    playClick();
+// =========================
+// COUNTER ANIMATION
+// =========================
 
-    window.location.href = "planet.html";
+function animateValue(id, end, speed) {
 
-}
-function animateCounter(id, target){
-
-    let count = 0;
-
-    const element =
+    const obj =
     document.getElementById(id);
 
-    if(!element) return;
+    if (!obj) return;
 
-    const interval = setInterval(() => {
+    let start = 0;
 
-        count++;
+    const timer =
+    setInterval(() => {
 
-        element.innerHTML = count;
+        start++;
 
-        if(count >= target){
+        obj.innerHTML = start;
 
-            clearInterval(interval);
+        if (start >= end) {
+
+            clearInterval(timer);
 
         }
 
-    },20);
+    }, speed);
 
 }
 
 window.addEventListener("load", () => {
 
-    animateCounter("sun-count",1);
+    animateValue(
+        "sun-count",
+        1,
+        100
+    );
 
-    animateCounter("planet-count",8);
+    animateValue(
+        "planet-count",
+        8,
+        100
+    );
 
-    animateCounter("moon-count",290);
+    animateValue(
+        "moon-count",
+        285,
+        10
+    );
 
-    animateCounter("asteroid-count",500);
+    animateValue(
+        "asteroid-count",
+        1000,
+        1
+    );
 
 });
