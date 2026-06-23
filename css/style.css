@@ -1251,3 +1251,16 @@ height:50px;
     color:#e2e8f0;
 }
 }
+.active-nav{
+
+    background:
+    linear-gradient(
+        135deg,
+        #38bdf8,
+        #60a5fa
+    ) !important;
+
+    box-shadow:
+    0 0 15px #38bdf8,
+    0 0 30px #38bdf8;
+}
