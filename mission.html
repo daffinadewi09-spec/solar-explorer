@@ -14,6 +14,14 @@
 
 <body>
 
+    <audio id="clickSound">
+        <source src="audio/click.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="bg-music" loop>
+        <source src="audio/space.mp3" type="audio/mpeg">
+    </audio>
+
     <div class="stars"></div>
 
     <nav class="navbar">
@@ -42,139 +50,178 @@
                 📖 Tentang
             </a>
 
+            <button
+                id="music-btn"
+                class="music-btn"
+                onclick="toggleMusic()">
+
+                ▶ Musik
+
+            </button>
+
         </div>
 
     </nav>
 
     <section class="planet-page">
 
-    <h1>🚀 Misi Antariksa</h1>
-
-    <p>
-        Jelajahi berbagai misi luar angkasa yang telah membantu manusia memahami alam semesta.
-    </p>
-
-   <!-- APOLLO 11 -->
-
-<div class="mission-card">
-
-    <h2>🌕 Apollo 11</h2>
-
-    <p>
-        Apollo 11 adalah misi luar angkasa pertama yang berhasil membawa manusia ke Bulan pada tahun 1969.
-    </p>
-
-    <ul>
-        <li>Tahun: 1969</li>
-        <li>Tujuan: Pendaratan manusia di Bulan</li>
-        <li>Astronot: Neil Armstrong, Buzz Aldrin, Michael Collins</li>
-    </ul>
-
-    <div class="fact-box">
-
-        <h3>⭐ Fakta Menarik</h3>
+        <h1>🚀 Misi Antariksa</h1>
 
         <p>
-            Neil Armstrong menjadi manusia pertama yang menginjakkan kaki di Bulan.
+            Jelajahi berbagai misi luar angkasa yang telah membantu manusia memahami alam semesta.
         </p>
 
-    </div>
+        <!-- APOLLO 11 -->
 
-</div>
+        <div class="mission-card">
 
-<!-- VOYAGER 1 -->
+            <img
+                src="images/apollo11.jpg"
+                alt="Apollo 11">
 
-<div class="mission-card">
+            <h2>🌕 Apollo 11</h2>
 
-    <h2>🛰️ Voyager 1</h2>
+            <p>
+                Apollo 11 adalah misi luar angkasa pertama yang berhasil membawa manusia ke Bulan pada tahun 1969.
+            </p>
 
-    <p>
-        Voyager 1 diluncurkan pada tahun 1977 untuk mempelajari planet-planet luar Tata Surya dan kini telah memasuki ruang antarbintang.
-    </p>
+            <ul>
+                <li>Tahun: 1969</li>
+                <li>Tujuan: Pendaratan manusia di Bulan</li>
+                <li>Astronot: Neil Armstrong, Buzz Aldrin, Michael Collins</li>
+            </ul>
 
-    <ul>
-        <li>Tahun: 1977</li>
-        <li>Tujuan: Menjelajahi planet luar</li>
-        <li>Status: Masih mengirim data ke Bumi</li>
-    </ul>
+            <div class="fact-box">
 
-    <div class="fact-box">
+                <h3>⭐ Fakta Menarik</h3>
 
-        <h3>⭐ Fakta Menarik</h3>
+                <p>
+                    Neil Armstrong menjadi manusia pertama yang menginjakkan kaki di Bulan.
+                </p>
 
-        <p>
-            Voyager 1 merupakan objek buatan manusia yang paling jauh dari Bumi.
-        </p>
+            </div>
 
-    </div>
+        </div>
 
-</div>
+        <!-- VOYAGER 1 -->
 
-<!-- PERSEVERANCE -->
+        <div class="mission-card">
 
-<div class="mission-card">
+            <img
+                src="images/voyager1.jpg"
+                alt="Voyager 1">
 
-    <h2>🔴 Perseverance Rover</h2>
+            <h2>🛰️ Voyager 1</h2>
 
-    <p>
-        Perseverance adalah robot penjelajah Mars yang dikirim NASA untuk mencari tanda-tanda kehidupan mikroba di masa lalu.
-    </p>
+            <p>
+                Voyager 1 diluncurkan pada tahun 1977 untuk mempelajari planet-planet luar Tata Surya dan kini telah memasuki ruang antarbintang.
+            </p>
 
-    <ul>
-        <li>Tahun: 2021</li>
-        <li>Tujuan: Eksplorasi Mars</li>
-        <li>Lokasi: Kawah Jezero</li>
-    </ul>
+            <ul>
+                <li>Tahun: 1977</li>
+                <li>Tujuan: Eksplorasi planet luar</li>
+                <li>Status: Masih aktif mengirim data ke Bumi</li>
+            </ul>
 
-    <div class="fact-box">
+            <div class="fact-box">
 
-        <h3>⭐ Fakta Menarik</h3>
+                <h3>⭐ Fakta Menarik</h3>
 
-        <p>
-            Perseverance membawa helikopter mini bernama Ingenuity yang berhasil terbang di Mars.
-        </p>
+                <p>
+                    Voyager 1 merupakan objek buatan manusia yang paling jauh dari Bumi.
+                </p>
 
-    </div>
+            </div>
 
-</div>
+        </div>
 
-<!-- JAMES WEBB -->
+        <!-- PERSEVERANCE -->
 
-<div class="mission-card">
+        <div class="mission-card">
 
-    <h2>🔭 James Webb Space Telescope</h2>
+            <img
+                src="images/perseverance.jpg"
+                alt="Perseverance Rover">
 
-    <p>
-        James Webb Space Telescope adalah teleskop luar angkasa paling canggih yang pernah dibuat untuk mengamati alam semesta.
-    </p>
+            <h2>🔴 Perseverance Rover</h2>
 
-    <ul>
-        <li>Tahun: 2021</li>
-        <li>Tujuan: Mengamati galaksi dan bintang jauh</li>
-        <li>Operator: NASA, ESA, CSA</li>
-    </ul>
+            <p>
+                Perseverance adalah robot penjelajah Mars yang dikirim NASA untuk mencari tanda-tanda kehidupan mikroba di masa lalu.
+            </p>
 
-    <div class="fact-box">
+            <ul>
+                <li>Tahun: 2021</li>
+                <li>Tujuan: Eksplorasi Mars</li>
+                <li>Lokasi: Kawah Jezero</li>
+            </ul>
 
-        <h3>⭐ Fakta Menarik</h3>
+            <div class="fact-box">
 
-        <p>
-            Teleskop ini mampu melihat cahaya dari galaksi yang terbentuk miliaran tahun lalu.
-        </p>
+                <h3>⭐ Fakta Menarik</h3>
 
-    </div>
+                <p>
+                    Perseverance membawa helikopter mini bernama Ingenuity yang berhasil terbang di Mars.
+                </p>
 
-</div>
+            </div>
 
-</section>
+        </div>
+
+        <!-- JAMES WEBB -->
+
+        <div class="mission-card">
+
+            <img
+                src="images/jwst.jpg"
+                alt="James Webb Space Telescope">
+
+            <h2>🔭 James Webb Space Telescope</h2>
+
+            <p>
+                James Webb Space Telescope adalah teleskop luar angkasa paling canggih yang pernah dibuat untuk mengamati alam semesta.
+            </p>
+
+            <ul>
+                <li>Tahun: 2021</li>
+                <li>Tujuan: Mengamati galaksi dan bintang jauh</li>
+                <li>Operator: NASA, ESA, CSA</li>
+            </ul>
+
+            <div class="fact-box">
+
+                <h3>⭐ Fakta Menarik</h3>
+
+                <p>
+                    Teleskop ini mampu melihat cahaya dari galaksi yang terbentuk miliaran tahun lalu.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
 
     <footer class="footer">
 
         <p>
-            © 2026 Solar Explorer | Dibuat oleh Daffina
+            © 2026 Solar Explorer | Dibuat oleh Daffina Hartantya Kirana Dewi
         </p>
 
     </footer>
+
+    <div id="loader">
+
+        <div class="loader-content">
+
+            <div class="loader-planet"></div>
+
+            <h2>Loading Solar Explorer...</h2>
+
+        </div>
+
+    </div>
+
+    <script src="js/script.js"></script>
 
 </body>
 
